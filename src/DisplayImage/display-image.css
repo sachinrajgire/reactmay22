@@ -1,0 +1,19 @@
+
+.di-container {
+    height: 700px;
+    width: 60%;
+    background-color: yellow;
+    border: 50px solid orange;   
+}
+
+.di-container-even img {
+    border: 10px solid grey;   
+}
+.di-container-odd img {
+    border: 10px solid red;
+    
+}
+    
+
+/* //border ( 10px solid red) */    
+

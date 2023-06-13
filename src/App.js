@@ -1,25 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import DisplayImage from './DisplayImage/DisplayImage.jsx';
+import {useState,useEffect} from 'react'
+import DisplayTitle from './DisplayTitle';
+import data from './Student_Data.json';
+import Carousel from './Carousel' ;
+console.log(data ,'data');
+//state //props
+
+// loop over data and show 
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Carousel />
     </div>
-  );
+  )
 }
 
 export default App;
