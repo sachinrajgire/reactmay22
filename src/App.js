@@ -12,16 +12,51 @@ import { v4 as uuidv4 } from 'uuid';
 
 // loop over data and show 
 
-const data = rawData.map(i=>{
- return {...i,id:uuidv4()}
-})
+function getData () {
+  return rawData.map(i=>{
+    return {...i,id:uuidv4(),isFav:false}
+   })
+}
+
 
 
 function App() {
-  const [fav, setFav] =useState([])
-  console.log(fav,'fav');
-  
 
+// const names =[
+//   {id:1,
+//   name:"sachin"},
+//   isFav:false
+//   {id:2,
+//   name:"Sai"},
+//   {id:3,
+//   name:"Bishesh"},
+
+// ]
+// const myfav=[1,2]
+
+// let filtered = names.filter(i=>{
+//   if(myfav.includes(i.id)){
+//     return true
+//   }
+//   return false
+// })
+// .map(j=>{
+//   return j.name
+// })
+// .join (" ,")
+
+
+
+// console.log(filtered,'filtered');
+
+
+  const [fav, setFav] =useState([])
+  const [data, setData] = useState(getData())
+
+  // Set the isFav variable directly on data and
+  //
+
+  console.log(fav,'fav');
   return (
     <div>
       {data.map(i=>{
